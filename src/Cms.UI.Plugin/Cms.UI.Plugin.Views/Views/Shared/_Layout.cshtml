@@ -1,0 +1,31 @@
+@using EPiServer.Framework.Web.Resources
+@using EPiServer.Shell
+@using EPiServer.Shell.Navigation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="/_content/Cms.UI.Plugin/main.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="article">
+        <div class="ui container">
+            <div class="ui container">
+                <div class="ui container">
+                    <h1 class="ui header">
+                        Cms UI Plugin
+                        <div class="sub header">Manage your important data here</div>
+                    </h1>
+                </div>
+
+                @RenderSection("Menu", required: false)
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+    <script src="/_content/Cms.UI.Plugin/main.min.js"></script>
+    @RenderSection("AdditionalScripts", required: false)
+</body>
+</html>

@@ -50,4 +50,7 @@
     <Content Remove="Features\Shared\Views\ElementBlocks\ChoiceElementBlock.cshtml" />
     <None Include="Features\Shared\Views\ElementBlocks\ChoiceElementBlock.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cms.UI.Plugin\Cms.UI.Plugin.csproj" />
+  </ItemGroup>
 </Project>

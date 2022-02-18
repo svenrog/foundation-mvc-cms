@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "formidable/configurations/es6-browser",
+    "formidable/configurations/es6-react",
+    "formidable/rules/filenames/off"
+  ],
+  "globals": {
+    "$": true,
+    "CHECKOUT_INFO": true,
+    "COUNTRIES": true,
+    "MESSAGEOUTPUT": true,
+    "PAYMENT_METHODS": true,
+    "PRICE_FORMAT": true
+  },
+  "rules": {
+    "arrow-parens": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "consistent-return": "off",
+    "func-style": "off",
+    "quotes": ["error", "single"],
+    "indent": ["error", 4],
+    "max-len": ["error", 130],
+    "no-invalid-this": "off",
+    "max-params": ["error", 6],
+    "no-alert": "off",
+    "no-return-assign": "off",
+    "no-invalid-this": "off",
+    "react/prop-types": "off",
+    "react/jsx-handler-names": "off",
+    "react/jsx-indent-props": ["error", 4]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cms.ui.plugin",
+  "version": "1.0.0",
+  "description": "Plugin for Optimizely",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rimraf ./wwwroot",
+    "watch": "npm run clean && webpack --watch --progress --config ./webpack.config.js --mode development",
+    "build": "npm run clean && webpack --config ./webpack.config.js --mode production"
+  },
+  "devDependencies": {
+    "css-loader": "^6.6.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "fomantic-ui-sass": "^2.7.80008",
+    "mini-css-extract-plugin": "^2.5.3",
+    "path": "^0.12.7",
+    "rimraf": "^3.0.2",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

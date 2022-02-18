@@ -1,0 +1,8 @@
+@using Cms.UI.Plugin.Controllers
+@using EPiServer.Shell
+@{
+    Layout = "_ShellLayout";
+}
+@model dynamic
+<iframe id="view-portal" src="@Paths.ToResource(typeof(ContentController), "Content")" width="100%" height="500" frameborder="0">
+</iframe>

@@ -1,0 +1,26 @@
+@using EPiServer.Framework.Web.Resources
+@using EPiServer.Shell
+@using EPiServer.Shell.Navigation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>/// Fancy Admin Plugin Title ///</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="@Paths.ToClientResource("EPiServer.Cms.UI.Admin", "clientResources/favicon.ico")" rel="icon" />
+    <link rel="preload" href="@Paths.ToShellClientResource("ClientResources/navigation.main.css")" as="styles" />
+    <link href="/_content/Cms.UI.Plugin/container.min.css" rel="stylesheet">
+</head>
+<body>
+    @Html.Raw(Html.CreatePlatformNavigationMenu())
+    @Html.AntiForgeryToken()    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div @Html.Raw(Html.ApplyPlatformNavigation()) style="z-index:auto;"></div>
+
+    @RenderBody()
+    <script src="/_content/Cms.UI.Plugin/container.min.js"></script>
+    @ClientResources.RenderResources("admin", new[] { ClientResourceType.Script })
+    @RenderSection("AdditionalScripts", false)
+</body>
+</html>

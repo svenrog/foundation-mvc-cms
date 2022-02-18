@@ -74,6 +74,12 @@ UpgradeLog*.htm
 .vs
 Setup*.log
 
+# Development files
+*.Development.json
+
+# wwwroot
+**/wwwroot
+
 # Foundation
 Build/Logs/*.log
 src/appdata/*
@@ -87,8 +93,4 @@ rebuild.cmd
 resetup.cmd
 src/Foundation/App_Data/
 src/Foundation/modules/
-/src/Foundation/wwwroot/js/main.min.js
-/src/Foundation/wwwroot/js/main.min.js.map
-/src/Foundation/wwwroot/scss/main.min.css
-/src/Foundation/wwwroot/scss/main.min.css.map
 /log.txt
