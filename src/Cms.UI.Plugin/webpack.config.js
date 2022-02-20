@@ -7,6 +7,11 @@ module.exports = (env, argv) => {
     IS_DEV: argv.mode === 'development',
     IS_PROD: argv.mode === 'production',
   };
+  const developmentProps = {
+    devtool: 'source-map',
+  };
+  const productionProps = {};
+  const additionalProps = mode.IS_PROD ? productionProps : developmentProps;
   const frontendPath = path.resolve(__dirname, 'frontend');
 
   return {
@@ -38,19 +43,19 @@ module.exports = (env, argv) => {
         '...',
         new CssMinimizerPlugin({
           minimizerOptions: {
-            preset: ['default', { discardComments: { removeAll: true } }],
+            preset: ['default', { discardComments: { removeAll: mode.IS_PROD } }],
           },
         }),
       ],
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: mode.IS_PROD ? '[name].min.css' : '[name].css',
+        filename: mode.IS_PROD ? '[name].css' : '[name].css',
       }),
     ],
     output: {
       path: path.join(__dirname, 'wwwroot/'),
-      filename: mode.IS_PROD ? '[name].min.js' : '[name].js',
+      filename: mode.IS_PROD ? '[name].js' : '[name].js',
       publicPath: '',
     },
     resolve: {
@@ -61,5 +66,6 @@ module.exports = (env, argv) => {
       poll: 1000,
       ignored: /node_modules/,
     },
+    ...additionalProps,
   };
 };

@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
-		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
-	</PropertyGroup>
+<PropertyGroup>
+	<TargetFramework>net5.0</TargetFramework>
+	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+</PropertyGroup>
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
